@@ -1,0 +1,17 @@
+﻿@using GlobalApp.Resources
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject LocService SharedLocalizer
+@inject IViewLocalizer pageLocalizer;
+
+@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<p>@SharedLocalizer.GetLocalizedHtmlString("Shared")</p>
+<p>@pageLocalizer["About"]</p>
+
